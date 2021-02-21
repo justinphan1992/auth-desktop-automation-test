@@ -39,6 +39,9 @@ const register = async () => {
         'document.querySelector("body").innerText.includes("Sign in")'
       ),
     ]);
+
+    await page.waitForTimeout(3000);
+
     await browser.close();
   } catch (err) {
     await browser.close();
